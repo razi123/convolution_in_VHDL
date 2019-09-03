@@ -33,11 +33,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 package multPkg is 
 
-constant matRow :  integer := 5; 
-constant matCol :  integer := 5;
+constant matRow :  integer := 4; 
+constant matCol :  integer := 4;
 constant kernRow : integer := 3;
 constant kernCol : integer := 3;
 constant kernStride : integer := 1;
+
 
 type t_2d_array is array(integer range <>, integer range <>) of  STD_LOGIC_VECTOR(3 downto 0);
 type t_2d_kernal is array(integer range <> , integer range <>) of STD_LOGIC_VECTOR(3 downto 0);

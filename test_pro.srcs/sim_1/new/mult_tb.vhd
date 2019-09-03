@@ -52,12 +52,14 @@ component matMult
 Port (clk : in STD_LOGIC := '0';
           inpMat : in t_2d_array(0 to matRow-1, 0 to matcol-1); 
           --outMat : out t_2d_out( 0 to 3);
+           --res : in STD_LOGIC:='0';
+           padDone : in STD_LOGIC:='0';
            doneBit : out STD_LOGIC:='0');
 end component;
 
 constant  clkPeriod : time := 20ns;
-constant matRow : integer := 5;
-constant matCol : integer := 5;
+constant matRow : integer := 4;
+constant matCol : integer := 4;
 constant kernRow : integer := 3;
 constant kernCol : integer := 3;
 constant kernStride : integer := 1;
@@ -65,14 +67,15 @@ constant kernStride : integer := 1;
 signal clkSignal : STD_LOGIC := '0';
 signal inpMatSignal : t_2d_array(0 to matRow-1, 0 to matcol-1);
 --signal outMatSignal : t_2d_out;
-signal doneSignal : STD_LOGIC;
+signal doneSignal, padDoneSignal : STD_LOGIC;
+signal resSignal : STD_LOGIC;
 
 begin
 
 uut : matMult 
       --generic map (matRow => matRow, matCol => matCol,kernRow => kernRow, kernCol => kernCol,kernStride => kernStride)
       --Port map (clk => clkSignal, inpMat => inpMatSignal, outMat => outMatSignal, doneBit => doneSignal);
-      Port map (clk => clkSignal,inpMat => inpMatSignal, doneBit => doneSignal);
+      Port map (clk => clkSignal,inpMat => inpMatSignal, padDone=> padDoneSignal, doneBit => doneSignal); --, res=>resSignal);
 
 clockGenerator : process
 begin
@@ -88,21 +91,29 @@ begin
 --                (std_logic_vector(unsigned(1,8)), std_logic_vector(unsigned(2,8)), std_logic_vector(unsigned(3,8)), std_logic_vector(unsigned(4,8))) ,
 --                (std_logic_vector(unsigned(1,8)), std_logic_vector(unsigned(2,8)), std_logic_vector(unsigned(3,8)), std_logic_vector(unsigned(4,8))));
 
---inpMatSignal <= (("0001","0010","0011","0100"),("0001","0010","0011","0100"),("0001","0010","0011","0100"),
---                 ("0001","0010","0011","0100"));     
---wait until doneSignal='1'; 
---inpMatSignal <= (("0001","0011","0011","0100"),("0001","0011","0011","0100"),("0001","0011","0011","0100"),
---                 ("0001","0011","0011","0100"));    
---wait until doneSignal='1';           
-     
 
-inpMatSignal <= (("0001","0010","0011","0100", "0101"),("0001","0010","0011","0100", "0101"),("0001","0010","0011","0100", "0101"),
-                 ("0001","0010","0011","0100", "0101"), ("0001","0010","0011","0100", "0101"));     
+-- _______________________ input for 4x4 _________________________________
+--padDoneSignal <= '0';
+--resSignal <= '1';
+inpMatSignal <= (("0001","0010","0011","0100"),("0001","0010","0011","0100"),("0001","0010","0011","0100"),
+                 ("0001","0010","0011","0100"));     
 wait until doneSignal='1'; 
 
-inpMatSignal <= (("0001","0011","0011","0011", "0001"),("0001","0011","0011","0011", "0001"),("0001","0011","0011","0011", "0001"),
-                 ("0001","0011","0011","0011", "0001"), ("0001","0011","0011","0011", "0001"));  
-wait until doneSignal='1';  
+--padDoneSignal <= '0';
+inpMatSignal <= (("0001","0011","0011","0100"),("0001","0011","0011","0100"),("0001","0011","0011","0100"),
+                 ("0001","0011","0011","0100"));    
+wait until doneSignal='1';           
+
+
+-- _______________________ input for 5x5 _________________________________     
+
+--inpMatSignal <= (("0001","0010","0011","0100", "0101"),("0001","0010","0011","0100", "0101"),("0001","0010","0011","0100", "0101"),
+--                 ("0001","0010","0011","0100", "0101"), ("0001","0010","0011","0100", "0101"));     
+--wait until doneSignal='1'; 
+
+--inpMatSignal <= (("0001","0011","0011","0011", "0001"),("0001","0011","0011","0011", "0001"),("0001","0011","0011","0011", "0001"),
+--                 ("0001","0011","0011","0011", "0001"), ("0001","0011","0011","0011", "0001"));  
+--wait until doneSignal='1';  
 
 
 end process;

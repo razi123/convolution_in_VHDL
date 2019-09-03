@@ -1,5 +1,5 @@
 # compile vhdl design source files
-vhdl xil_defaultlib  \
+vhdl2008 xil_defaultlib  \
 "../../../../test_pro.srcs/sources_1/new/multPkg.vhd" \
 "../../../../test_pro.srcs/sources_1/new/matMult.vhd" \
 "../../../../test_pro.srcs/sim_1/new/mult_tb.vhd" \
