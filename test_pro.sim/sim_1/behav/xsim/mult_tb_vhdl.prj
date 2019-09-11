@@ -1,6 +1,13 @@
 # compile vhdl design source files
 vhdl2008 xil_defaultlib  \
 "../../../../test_pro.srcs/sources_1/new/multPkg.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../test_pro.srcs/sources_1/new/BufferInput.vhd" \
+"../../../../test_pro.srcs/sources_1/new/Multiply.vhd" \
+"../../../../test_pro.srcs/sources_1/new/rowCount.vhd" \
+
+vhdl2008 xil_defaultlib  \
 "../../../../test_pro.srcs/sources_1/new/matMult.vhd" \
 "../../../../test_pro.srcs/sim_1/new/mult_tb.vhd" \
 

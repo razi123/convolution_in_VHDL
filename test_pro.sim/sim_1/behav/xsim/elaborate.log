@@ -14,6 +14,9 @@ Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
 Compiling package xil_defaultlib.multpkg
+Compiling architecture behavioral of entity xil_defaultlib.BufferInput [bufferinput_default]
+Compiling architecture behavioral of entity xil_defaultlib.rowCount [rowcount_default]
+Compiling architecture behavioral of entity xil_defaultlib.Multiply [multiply_default]
 Compiling architecture behavioral of entity xil_defaultlib.matMult [matmult_default]
 Compiling architecture behavioral of entity xil_defaultlib.mult_tb
 Built simulation snapshot mult_tb_behav

@@ -1,4 +1,10 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/multPkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/BufferInput.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BufferInput'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/Multiply.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Multiply'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/rowCount.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rowCount'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/matMult.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'matMult'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sim_1/new/mult_tb.vhd" into library xil_defaultlib

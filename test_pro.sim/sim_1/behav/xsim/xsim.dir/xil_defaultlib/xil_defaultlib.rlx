@@ -2,6 +2,9 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sim_1/new/mult_tb.vhd,1567607802,vhdl2008,,,,mult_tb,,,,,,,,
-C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/matMult.vhd,1567609911,vhdl2008,,,,matmult,,,,,,,,
-C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/multPkg.vhd,1567448847,vhdl2008,C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sim_1/new/mult_tb.vhd;C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/matMult.vhd,,,multpkg,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sim_1/new/mult_tb.vhd,1568216196,vhdl2008,,,,mult_tb,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/BufferInput.vhd,1568215767,vhdl,,,,bufferinput,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/Multiply.vhd,1568215648,vhdl,,,,multiply,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/matMult.vhd,1568216389,vhdl2008,,,,matmult,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/multPkg.vhd,1568212607,vhdl2008,C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sim_1/new/mult_tb.vhd;C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/BufferInput.vhd;C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/Multiply.vhd;C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/matMult.vhd;C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/rowCount.vhd,,,multpkg,,,,,,,,
+C:/Users/khazi/projects/MasterThesis/test_pro/test_pro.srcs/sources_1/new/rowCount.vhd,1568215755,vhdl,,,,rowcount,,,,,,,,
