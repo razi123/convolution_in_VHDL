@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 package multPkg is 
 
-constant matRow :  integer := 4; 
-constant matCol :  integer := 4;
+constant matRow :  integer := 5; 
+constant matCol :  integer := 5;
 constant kernRow : integer := 3;
 constant kernCol : integer := 3;
 constant kernStride : integer := 1;
