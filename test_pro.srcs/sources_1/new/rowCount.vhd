@@ -40,8 +40,10 @@ entity rowCount is
  port(clk: in STD_LOGIC;
       cntEnb : in STD_LOGIC :='0';
       rst : in STD_LOGIC := '0';
-      cntRow : out integer range 0 to (((matRow-kernRow)/kernStride)+1)-1  := 0;
-      cntCol : out integer range 0 to (((matCol-kernCol)/kernStride)+1)-1  := 0;
+      --cntRow : out integer range 0 to (((matRow-kernRow)/kernStride)+1)-1  := 0;
+      --cntCol : out integer range 0 to (((matCol-kernCol)/kernStride)+1)-1  := 0;
+      cntRow : out integer range 0 to matRow   := 0;
+      cntCol : out integer range 0 to matCol   := 0;
       colDone : out STD_LOGIC := '0');
 end rowCount;
 
@@ -71,12 +73,31 @@ if rst='1' then
 
 else
 
-  if cntEnb ='1' then    
-            if (s_n < (matRow-1)) then       
+--  if cntEnb ='1' then    
+--            if (s_n < (matRow-1)) then       
+--                s_n <= s_n + 1;
+--                s_m <= s_m;
+--                colDone <= '0';
+--            elsif(s_m < (matCol-1)) then     
+--                s_n <= 0;
+--                s_m <= s_m + 1;
+--                colDone <= '0';
+--            else
+--                s_n <= 0;
+--                s_m <= 0;
+--                colDone <= '1';
+--            end if;
+     
+--    end if;
+--    end if;
+--    end if;
+
+ if cntEnb ='1' then    
+            if (s_n < (matCol-1)) then       
                 s_n <= s_n + 1;
                 s_m <= s_m;
                 colDone <= '0';
-            elsif(s_m < (matCol-1)) then     
+            elsif(s_m < (matRow-1)) then     
                 s_n <= 0;
                 s_m <= s_m + 1;
                 colDone <= '0';
@@ -89,11 +110,14 @@ else
     end if;
     end if;
     end if;
---cntRow <= n;
---cntCol <= m;
+
+
 end process;        ---- counterRC Process ends here
 
 cntRow <= s_n;
 cntCol <= s_m;
+
+--cntRow <= s_m;
+--cntCol <= s_n;
 end Behavioral;
 

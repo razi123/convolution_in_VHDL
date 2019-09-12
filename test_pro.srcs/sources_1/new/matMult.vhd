@@ -55,6 +55,8 @@ signal outData :  t_2d_kernal(0 to kernRow-1, 0 to kernCol-1);
 signal cntEnbSig : STD_LOGIC:= '0';
 signal cntRow : integer range 0 to (((matRow-kernRow)/kernStride)+1)-1 ;
 signal cntCol : integer range 0 to (((matRow-kernRow)/kernStride)+1)-1 ;
+--signal cntRow : integer range 0 to ((matRow-kernRow)/(kernStride+1))+ 1 ;
+--signal cntCol : integer range 0 to ((matRow-kernCol)/(kernStride+1))+ 1 ;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                         SIGNAL DECLERATION 
@@ -86,6 +88,8 @@ component rowCount
          rst : in STD_LOGIC := '0';
          cntRow : out integer range 0 to (((matRow-kernRow)/kernStride)+1)-1  := 0;
          cntCol : out integer range 0 to (((matCol-kernRow)/kernStride)+1)-1  := 0;
+       --  cntRow : out integer range 0 to (((matRow-kernRow)/(kernStride+1)-1  := 0;
+       --  cntCol : out integer range 0 to (((matCol-kernRow)/kernStride)+1)-1  := 0;
          colDone : out STD_LOGIC := '0');
     
 end component;

@@ -130,8 +130,10 @@ begin
           s_writeEnb <= '1'; 
                 for i in 0 to 2 loop
                     for j in 0 to 2 loop
-                    s_matKernal(i,j) <= s_padInp(i + cntCol -1 ,j + cntRow -1);
-    
+                     s_matKernal(i,j) <= s_padInp(i + cntCol -1 ,j + cntRow -1);  -- orignal
+                     -- s_matKernal(i,j) <= s_padInp(j + cntCol -1 ,i + cntRow -1); 
+                    -- s_matKernal(i,j) <= s_padInp(i + cntRow -1,j + cntCol -1);   --upside down read l2r
+                    --  s_matKernal(i,j) <= s_padInp(j + cntRow -1,i + cntCol -1); -- upside down read t2b
                     end loop; 
                 end loop; 
        
